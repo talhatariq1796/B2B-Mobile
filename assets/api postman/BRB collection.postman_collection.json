@@ -1,0 +1,253 @@
+{
+  "info": {
+    "_postman_id": "85f47e23-69f7-487a-beae-57314983684c",
+    "name": "BRB collection",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "30232347",
+    "_collection_link": "https://go.postman.co/collection/30232347-85f47e23-69f7-487a-beae-57314983684c?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Get auth token",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"username\": \"APIkarimhotelya\",\n  \"password\": \"TBapi1000!\",\n  \"micrositeId\": \"hotelya\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://online.travelcompositor.com/resources/authentication/authenticate",
+          "protocol": "https",
+          "host": [
+            "online",
+            "travelcompositor",
+            "com"
+          ],
+          "path": [
+            "resources",
+            "authentication",
+            "authenticate"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Scan a card",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJob3RlbHlhLUFQSWthcmltaG90ZWx5YSIsInNpbmdsZVVzZSI6ZmFsc2UsImlhdCI6MTc4ODE3NTU4OSwiZXhwIjoxNzg4MTgyNzg5LCJqdGkiOiI4NkQyNTEyMS1CNjI2LTQyMzUtODk3Ny1BMEE4MjQxNDYwRUUifQ.UU35yZ_P47YsX21_8CmN28h4Vva8TKzihQplAw4-mkNJchv5BuID6faX4f4jV5BoBOMtl4wdeSApaAtk2X2zHg",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "da0a039588f0d592c70b7c73d6223be0941a356b",
+            "disabled": true
+          }
+        ],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "card_image",
+              "type": "file",
+              "src": [
+                "/Users/app/Downloads/Image (3).jpeg"
+              ]
+            }
+          ]
+        },
+        "url": {
+          "raw": "https://uniformed-outsource-fiddling.ngrok-free.dev/api/leads/",
+          "protocol": "https",
+          "host": [
+            "uniformed-outsource-fiddling",
+            "ngrok-free",
+            "dev"
+          ],
+          "path": [
+            "api",
+            "leads",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Save corrections",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJob3RlbHlhLUFQSWthcmltaG90ZWx5YSIsInNpbmdsZVVzZSI6ZmFsc2UsImlhdCI6MTc4ODE2NzMzOCwiZXhwIjoxNzg4MTc0NTM4LCJqdGkiOiI1QTY4NEUxMi1DNUZELTQ4QzMtOTVBMC0xQTFFMjJGOTc1NEEifQ.b6RGo4AO1FMmgbQ46oe0jbWAsI8CRJ4SG0RR8XPh6lSI46_gPNsCwuuOSHhl3iovkY3Im4JanByYzDlLUKyVng",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"country\": \"Italy\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8000/api/leads/39/",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "leads",
+            "39",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Submit to booking engine",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJob3RlbHlhLUFQSWthcmltaG90ZWx5YSIsInNpbmdsZVVzZSI6ZmFsc2UsImlhdCI6MTc4ODE3NDU1MSwiZXhwIjoxNzg4MTgxNzUxLCJqdGkiOiIxRDgzQUFGQi0zREU2LTQ0OTUtQTgwNS1DNDRCOTAxODFDNUEifQ.q-oaRNn-MbQZNfqDBYKIFuH3VmURM5-BNIrOi8gfPOtki2JNB_agcKcTh7bHODa4yuq2vlf9TXWzOY1L69jjDg",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8000/api/leads/62/submit/",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "leads",
+            "62",
+            "submit",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get all Leads",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJob3RlbHlhLUFQSWthcmltaG90ZWx5YSIsInNpbmdsZVVzZSI6ZmFsc2UsImlhdCI6MTc4ODE3NTU4OSwiZXhwIjoxNzg4MTgyNzg5LCJqdGkiOiI4NkQyNTEyMS1CNjI2LTQyMzUtODk3Ny1BMEE4MjQxNDYwRUUifQ.UU35yZ_P47YsX21_8CmN28h4Vva8TKzihQplAw4-mkNJchv5BuID6faX4f4jV5BoBOMtl4wdeSApaAtk2X2zHg",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8000/api/leads/",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "leads",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Agency by Id",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "auth-token",
+            "value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJob3RlbHlhLUFQSWthcmltaG90ZWx5YSIsInNpbmdsZVVzZSI6ZmFsc2UsImlhdCI6MTc4ODE3NTU4OSwiZXhwIjoxNzg4MTgyNzg5LCJqdGkiOiI4NkQyNTEyMS1CNjI2LTQyMzUtODk3Ny1BMEE4MjQxNDYwRUUifQ.UU35yZ_P47YsX21_8CmN28h4Vva8TKzihQplAw4-mkNJchv5BuID6faX4f4jV5BoBOMtl4wdeSApaAtk2X2zHg"
+          }
+        ],
+        "url": {
+          "raw": "https://online.travelcompositor.com/resources/agency/hotelya/TRADESHOW-60",
+          "protocol": "https",
+          "host": [
+            "online",
+            "travelcompositor",
+            "com"
+          ],
+          "path": [
+            "resources",
+            "agency",
+            "hotelya",
+            "TRADESHOW-60"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get User by id",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "auth-token",
+            "value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJob3RlbHlhLUFQSWthcmltaG90ZWx5YSIsInNpbmdsZVVzZSI6ZmFsc2UsImlhdCI6MTc4ODE3NTU4OSwiZXhwIjoxNzg4MTgyNzg5LCJqdGkiOiI4NkQyNTEyMS1CNjI2LTQyMzUtODk3Ny1BMEE4MjQxNDYwRUUifQ.UU35yZ_P47YsX21_8CmN28h4Vva8TKzihQplAw4-mkNJchv5BuID6faX4f4jV5BoBOMtl4wdeSApaAtk2X2zHg"
+          }
+        ],
+        "url": {
+          "raw": "https://online.travelcompositor.com/resources/user/hotelya/TRADESHOW-60",
+          "protocol": "https",
+          "host": [
+            "online",
+            "travelcompositor",
+            "com"
+          ],
+          "path": [
+            "resources",
+            "user",
+            "hotelya",
+            "TRADESHOW-60"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
